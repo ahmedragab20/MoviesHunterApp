@@ -45,7 +45,6 @@
                 search-results
                 position-absolute
                 top-10
-                w-25
                 mt-1
                 list-unstyled
               "
@@ -178,6 +177,7 @@ nav {
         right: 1%;
         left: auto;
         max-height: 500px;
+        max-width: 280px;
         overflow-y: scroll;
 
         li {
