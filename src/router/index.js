@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
+import Error from "../components/global/Error";
 import Home from "../views/Home.vue";
 import TV from "../views/TV.vue";
 import Profile from "../views/Profile.vue";
@@ -6,6 +7,11 @@ import MoviePage from "../components/PopularMovie/MoviePage";
 import ShowPage from "../components/Tv/ShowPage";
 
 const routes = [
+  {
+    path: "/:catchAll(.*)",
+    name: "Not Found",
+    component: Error,
+  },
   {
     path: "/",
     name: "Home",
