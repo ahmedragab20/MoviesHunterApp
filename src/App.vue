@@ -1,17 +1,24 @@
 <template>
   <div id="app">
+    <on-load />
     <nav-bar />
     <router-view v-slot="{ Component }">
       <transition name="rout" mode="out-in">
         <component :is="Component"></component>
       </transition>
     </router-view>
+    <main-footer />
   </div>
 </template>
 <script>
+import onLoad from "@/components/global/onLoad.vue";
 import NavBar from "@/components/Header/NavBar";
+import MainFooter from "@/components/global/MainFooter";
 export default {
-  components: { NavBar },
+  components: { NavBar, onLoad, MainFooter },
+  mounted() {
+    return setInterval(this.$store.commit("updateCartStorage"));
+  },
 };
 </script>
 <style lang="scss">

@@ -111,7 +111,6 @@ export default {
 
   mounted() {
     this.movieDetails(this.$route.params.id);
-    this.movieData();
   },
   computed: {
     moviePoster() {
@@ -129,9 +128,6 @@ export default {
           "?api_key=9ab45b4f4d577cd87a3f36c8f6ed2963&language=en-US/movie/popular?language=es-ES"
       );
       this.details = res.data;
-    },
-    movieData() {
-      this.$store.commit("movieData");
     },
   },
 };
