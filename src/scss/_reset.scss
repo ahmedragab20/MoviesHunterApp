@@ -1,0 +1,35 @@
+html,
+body {
+  overflow-x: hidden;
+  // background-color: #101622;
+  background-color: #161c23;
+  color: #d1d1d1;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
+  padding-bottom: 20px;
+}
+// the scroll bar designing
+::-webkit-scrollbar {
+  width: 5px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #050505;
+
+  border-radius: 0 0 100px 100px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #010101e1;
+}
+img {
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    box-shadow: none;
+  }
+}
